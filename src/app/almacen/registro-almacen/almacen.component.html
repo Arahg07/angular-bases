@@ -1,0 +1,36 @@
+<h1>Almacen miselanea</h1>
+
+<dl>
+  <td>Producto: </td>
+  <dd>{{ getAlmacenDescription() }}</dd>
+
+  <td>Stock: </td>
+  <dd>{{stock}}</dd>
+
+  <td>Entradas:</td>
+  <dd> {{entradas}} </dd>
+
+  <td>Salidas: </td>
+  <dd>{{salidas}} </dd>
+</dl>
+
+
+<button
+*ngIf="producto === 'Leche' "
+class="btn btn-primary mx-2"
+(click)="changeProducto('Harina')"
+>
+  Agregar entrada
+</button>
+
+<button
+*ngIf="stock < 30 "
+class="btn btn-primary mx-2" (click)="changeStock(100)">
+  Agregar salidas
+</button>
+
+<button
+class="btn btn-primary mx-2"
+(click)="reset()">
+  Resetear
+</button>
