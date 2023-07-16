@@ -1,0 +1,19 @@
+<h1>Empresa</h1>
+<hr>
+
+
+<div class="row">
+  <div class ="col">
+    <app-empresa-list [empresasList]="nombreEmpresas"
+    (EnviarIdexEmpresa)="eliminarEmpresas($event)"
+    ></app-empresa-list>
+  </div>
+
+  <div class="col">
+    <app-empresa-add-empresa
+    (EnviarDatosEmpresa)="addEmpresas($event)">
+    </app-empresa-add-empresa>
+  </div>
+</div>
+
+

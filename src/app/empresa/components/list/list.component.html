@@ -1,0 +1,24 @@
+<h4>Listados</h4>
+  <ul class="list-group d-flex justify-content-between">
+    <li
+    *ngFor="let nombreEmpresa of empresasList;
+     let i = index;
+     let isFirst = first;
+     let isLast = last;
+     let isPar = even;"
+    class="list-group-item"
+    [ngClass]="{
+      'list-group-item-dark': isLast,
+      'list-group-item-primary': isFirst }">
+
+    <div>
+      <span class="text-primary">{{ i +1 }} .- </span>
+      <span>Empresa: {{nombreEmpresa.nombre}} -</span>
+      <span>Asignación: {{nombreEmpresa.asignacion}}</span>
+    </div>
+
+    <button class="btn btn-danger" (click)="deleteEmpresa(nombreEmpresa.id)">X</button>
+
+    <!-- <span>{{ isPar }}</span> -->
+  </li>
+  </ul>

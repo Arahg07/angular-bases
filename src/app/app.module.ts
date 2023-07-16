@@ -7,6 +7,7 @@ import { AlmacenComponent } from './almacen/registro-almacen/almacen.component';
 import { ProductoComponent } from './almacen/producto/producto.component';
 import { CounterModule } from './counter/components/counter.module';
 import { AlmacenModule } from './almacen/almacen.module';
+import { EmpresaModule } from './empresa/empresa.module';
 
 
 @NgModule({
@@ -14,7 +15,7 @@ import { AlmacenModule } from './almacen/almacen.module';
     AppComponent
   ],
   imports: [
-    BrowserModule, CounterModule, AlmacenModule
+    BrowserModule, CounterModule, AlmacenModule, EmpresaModule
   ],
   providers: [],
   bootstrap: [AppComponent]
